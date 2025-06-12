@@ -77,7 +77,7 @@ This framework includes the following trading strategies:
   * **MACDStrategy:** Utilizes the Moving Average Convergence Divergence indicator for momentum and trend signals.
   * **RSIStrategy:** Employs the Relative Strength Index to identify overbought/oversold conditions and potential reversals.
 
-For detailed descriptions, logic, and parameters of each strategy, refer to the [Strategies documentation](https://www.google.com/search?q=docs/strategies.md).
+For detailed descriptions, logic, and parameters of each strategy, refer to the [Strategies documentation](https://github.com/eddiesung111/my-backtest-strategies-v2/blob/main/docs/strategies.md).
 
 ## Run the program
 You can simply use the following command to run the program.

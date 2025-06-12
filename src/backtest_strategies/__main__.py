@@ -1,5 +1,4 @@
 # This file allows `python -m backtest_strategies` to work.
-
 import sys
 from .run import main
 
