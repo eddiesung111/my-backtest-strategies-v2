@@ -116,6 +116,3 @@ Contributions are welcome\! Please see the relevant documentation in the `docs/`
 ## 📄 License
 
 This project is licensed under the [MIT License](https://www.google.com/search?q=LICENSE).
-
-```
-```
