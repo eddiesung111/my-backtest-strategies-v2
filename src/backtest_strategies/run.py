@@ -13,11 +13,11 @@ from src.backtest_strategies.strategies.macd_strategy import MACDStrategy
 from src.backtest_strategies.strategies.rsi_strategy import RSIStrategy
 
 STRATEGIES = { # Changed variable name to avoid conflict with `strategies` dictionary
-    "1": BuyHold,
-    "2": EMAGoldenCross,
-    "3": MACDStrategy,
-    "4": RSIStrategy,
-    "5": SMAGoldenCross,
+    "BuyHold": BuyHold,
+    "EMAGoldenCross": EMAGoldenCross,
+    "MACDStrategy": MACDStrategy,
+    "RSIStrategy": RSIStrategy,
+    "SMAGoldenCros": SMAGoldenCross,
 }
 
 # IMPORTANT: Wrap your main logic in a function
