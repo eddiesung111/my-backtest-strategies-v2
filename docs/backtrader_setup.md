@@ -37,17 +37,17 @@ This command creates a new directory named .venv (or whatever you choose) in you
 ### Step 3.3: Activate the Virtual Environment
 Before installing any packages or running scripts, you must activate the virtual environment.
 
-*On macOS / Linux:
+* On macOS / Linux:
 ```bash
 source .venv/bin/activate
 ```
 
-*On Windows (PowerShell):
+* On Windows (PowerShell):
 ```powershell
 .venv\Scripts\Activate.ps1
 ```
 
-*On Windows (Command Prompt):
+* On Windows (Command Prompt):
 ```DOS
 .venv\Scripts\activate.bat
 ```
