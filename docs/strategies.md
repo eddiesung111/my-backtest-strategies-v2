@@ -20,8 +20,8 @@ The `BuyHold` strategy serves as a fundamental benchmark. It represents a passiv
 The `EMA Golden Cross` strategy is a trend-following strategy that uses two Exponential Moving Averages (EMAs) of different periods to generate trading signals.
 
 * **Core Logic:**
-    * **Entry (Buy Signal):** Generated when the shorter-period EMA crosses *above* the longer-period EMA. This indicates a potential bullish trend reversal or continuation.
-    * **Exit (Sell Signal):** Generated when the shorter-period EMA crosses *below* the longer-period EMA. This indicates a potential bearish trend reversal or continuation.
+    * **Entry (Buy Signal):** Generated when the shorter-period Exponential Moving Average (EMA) crosses *above* the longer-period EMA (a 'golden cross'). This indicates a potential bullish trend reversal or continuation.
+    * **Exit (Sell Signal):** Generated when the shorter-period EMA crosses *below* the longer-period EMA (a 'death cross'). This indicates a potential bearish trend reversal or continuation.
 * **Parameters:**
     * `fast` (integer, default: `5`): The period for the shorter-term Exponential Moving Average.
     * `slow` (integer, default: `20`): The period for the longer-term Exponential Moving Average.
@@ -46,3 +46,42 @@ Similar to the EMA Golden Cross, the `SMA Golden Cross` strategy is a classic tr
     * **Smoother than EMA:** SMAs give equal weight to all data points in their period, making them smoother but potentially slower to react than EMAs.
     * **Whipsaws:** Also susceptible to whipsaws in non-trending markets.
     * **Robustness:** Often used as a foundational trend-following system due to its simplicity and long history.
+
+## 4. MACD Strategy
+
+The `MACD Strategy` utilizes the Moving Average Convergence Divergence (MACD) indicator, a momentum oscillator used to reveal the strength, direction, momentum, and duration of a trend in a stock's price.
+
+* **Core Logic:**
+    * **MACD Line:** The difference between a fast and slow period EMA.
+    * **Signal Line:** An EMA of the MACD Line itself.
+    * **Histogram:** Represents the difference between the MACD Line and the Signal Line.
+    * **Entry (Buy Signal):** Typically generated when the MACD Line crosses *above* the Signal Line. A stronger buy signal often occurs if this crossover happens below the zero line.
+    * **Exit (Sell Signal):** Typically generated when the MACD Line crosses *below* the Signal Line. A stronger sell signal often occurs if this crossover happens above the zero line.
+* **Parameters:**
+    * `fast_period` (integer, default: `12`): The period for the faster EMA.
+    * `slow_period` (integer, default: `26`): The period for the slower EMA.
+    * `signal_period` (integer, default: `9`): The period for the EMA of the MACD line (the signal line).
+* **Assumptions & Considerations:**
+    * **Trend-Following:** Primarily used as a trend-following momentum indicator.
+    * **Divergence:** Can identify potential trend reversals when the price and MACD move in opposite directions (e.g., price makes a higher high, but MACD makes a lower high).
+    * **Lagging:** Still a lagging indicator, can be slow to react to sharp reversals.
+    * **Consolidation:** May generate false signals during sideways or ranging markets.
+
+## 5. RSI Strategy
+
+The `RSI Strategy` employs the Relative Strength Index (RSI), a momentum oscillator that measures the speed and change of price movements. It is primarily used to identify overbought or oversold conditions in an asset.
+
+* **Core Logic:**
+    * **RSI Calculation:** Typically calculated over a 14-period timeframe.
+    * **Overbought/Oversold Levels:** Standard levels are 70 (overbought) and 30 (oversold), but these can be adjusted.
+    * **Entry (Buy Signal):** Generated when the RSI crosses *below* the `oversold` level and then crosses *back above* it, indicating that the asset was oversold and may be due for a rebound.
+    * **Exit (Sell Signal):** Generated when the RSI crosses *above* the `overbought` level and then crosses *back below* it, indicating that the asset was overbought and may be due for a pullback.
+* **Parameters:**
+    * `period` (integer, default: `14`): The number of periods used to calculate the RSI.
+    * `oversold_level` (integer, default: `30`): The RSI value below which an asset is considered oversold.
+    * `overbought_level` (integer, default: `70`): The RSI value above which an asset is considered overbought.
+* **Assumptions & Considerations:**
+    * **Oscillator:** Best used in ranging or consolidating markets, rather than strongly trending ones.
+    * **False Signals in Trends:** Can generate premature signals in strong trends (e.g., an asset can remain overbought for an extended period in a strong uptrend).
+    * **Divergence:** RSI divergence (when RSI moves opposite to price) can be a strong signal for reversals.
+    * **Customization:** Overbought/oversold levels can be adjusted based on asset volatility and market conditions.

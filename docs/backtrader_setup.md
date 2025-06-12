@@ -37,16 +37,17 @@ This command creates a new directory named .venv (or whatever you choose) in you
 ### Step 3.3: Activate the Virtual Environment
 Before installing any packages or running scripts, you must activate the virtual environment.
 
-On macOS / Linux:
+*On macOS / Linux:
 ```bash
 source .venv/bin/activate
 ```
-On Windows (PowerShell):
+
+*On Windows (PowerShell):
 ```powershell
 .venv\Scripts\Activate.ps1
 ```
 
-On Windows (Command Prompt):
+*On Windows (Command Prompt):
 ```DOS
 .venv\Scripts\activate.bat
 ```
@@ -59,9 +60,9 @@ Once your virtual environment is active, install backtrader, pandas, and matplot
 pip install backtrader pandas matplotlib
 ```
 
-backtrader: The core backtesting framework.
-pandas: Used for data manipulation, especially when loading data into Backtrader.
-matplotlib: Used by Backtrader for generating charts of your backtest results.
+* **backtrader**: The core backtesting framework.
+* **pandas**: Used for data manipulation, especially when loading data into Backtrader.
+* **matplotlib**: Used by Backtrader for generating charts of your backtest results.
 (Optional: Create requirements.txt)
 After successfully installing all dependencies, you can create a requirements.txt file to easily manage and share your project's dependencies:
 
