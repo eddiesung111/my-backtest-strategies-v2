@@ -19,8 +19,7 @@ A robust and extensible framework for developing, testing, and analyzing quantit
 .
 ├── docs/                               \# Comprehensive documentation files
 │   ├── backtrader\_setup.md             \# Guide to setting up Backtrader environment
-│   ├── strategies.md                   \# Detailed descriptions of all trading strategies
-│   └── usage.md                        \# General usage guide for the framework
+│   └── strategies.md                   \# Detailed descriptions of all trading strategies
 ├── src/                                \# Source code for strategies and core logic
 │   └── backtest\_strategies/
 │       ├── strategies/                 \# Individual trading strategy implementations
@@ -50,10 +49,9 @@ Follow these steps to set up the project and run your first backtest.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your_username/my-backtest-strategies-v2.git](https://github.com/your_username/my-backtest-strategies-v2.git)
+    git clone [https://github.com/eddiesung111/my-backtest-strategies-v2.git](https://github.com/eddiesung111/my-backtest-strategies-v2.git)
     cd my-backtest-strategies-v2
     ```
-    *(Remember to replace `your_username` with your actual GitHub username or the correct repository URL.)*
 
 2.  **Create and activate a virtual environment:**
     ```bash
@@ -80,6 +78,18 @@ This framework includes the following trading strategies:
   * **RSIStrategy:** Employs the Relative Strength Index to identify overbought/oversold conditions and potential reversals.
 
 For detailed descriptions, logic, and parameters of each strategy, refer to the [Strategies documentation](https://www.google.com/search?q=docs/strategies.md).
+
+## Run the progrma
+You can simply use the following command to run the program.
+```bash
+python3 src/backtest_strategies/run.py [Strategies]
+```
+Strategies could be:
+* BuyHold,
+* EMAGoldenCross
+* MACDStrategy
+* RSIStrategy
+* SMAGoldenCross
 
 ## ✅ Testing
 
