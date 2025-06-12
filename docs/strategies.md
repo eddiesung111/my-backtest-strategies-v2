@@ -1,4 +1,3 @@
-```markdown
 # Trading Strategies
 
 This document provides a detailed overview of the trading strategies implemented within the `my-backtest-strategies-v2` project. Each strategy is designed as a `backtrader.Strategy` subclass, allowing for modular development and easy integration into the backtesting framework.
