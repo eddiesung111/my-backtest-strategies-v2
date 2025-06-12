@@ -79,13 +79,13 @@ This framework includes the following trading strategies:
 
 For detailed descriptions, logic, and parameters of each strategy, refer to the [Strategies documentation](https://www.google.com/search?q=docs/strategies.md).
 
-## Run the progrma
+## Run the program
 You can simply use the following command to run the program.
 ```bash
 python3 src/backtest_strategies/run.py [Strategies]
 ```
 Strategies could be:
-* BuyHold,
+* BuyHold
 * EMAGoldenCross
 * MACDStrategy
 * RSIStrategy
