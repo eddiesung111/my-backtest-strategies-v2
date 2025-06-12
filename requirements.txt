@@ -2,3 +2,4 @@ backtrader>=1.9.74.123   # core backtesting engine
 yfinance>=0.2.14         # data download from Yahoo Finance
 pandas>=1.5.0            # data manipulation
 matplotlib>=3.6.0        # plotting
+pytest>=7.0.0            # testing framework

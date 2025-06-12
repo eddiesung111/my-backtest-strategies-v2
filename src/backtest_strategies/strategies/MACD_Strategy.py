@@ -1,33 +1,37 @@
+# src/backtest_strategies/strategies/macd_strategy.py
 import backtrader as bt
-import os
 
 class MACDStrategy(bt.Strategy):
+    # Your strategy's parameters. Keep these as they are.
+    params = (('fast_period', 12),
+              ('slow_period', 26),
+              ('signal_period', 9),)
+
     def __init__(self):
-        self.last_day = self.data.datetime.date(-1)
-        self.macd = bt.indicators.MACD(self.data.close, plot = False)
+        self.dataclose = self.datas[0].close
+        self.order = None
 
+        # Correct way to instantiate MACD indicator by mapping your strategy's
+        # parameter names to the MACD indicator's expected parameter names.
+        self.macd = bt.indicators.MACD(self.dataclose,
+                                       period_me1=self.p.fast_period,        # Map fast_period to period_me1
+                                       period_me2=self.p.slow_period,        # Map slow_period to period_me2
+                                       period_signal=self.p.signal_period)    # Map signal_period to period_signal
 
-            
-    def log(self, action, shares, price):
-        date = self.datas[0].datetime.date(0)
-        print(f"{date} - {action} {shares} shares at {price:.2f}")
-    
+        # This line remains correct as it uses the output lines of the MACD indicator
+        self.crossover = bt.indicators.CrossOver(self.macd.macd, self.macd.signal)
+
     def next(self):
-        print(self.macd.signal)
-        size = self.broker.cash / self.data.close[0]
+        if self.order:
+            return
+
         if not self.position:
             if self.crossover > 0:
-                self.log("Buy", size, self.data.close[0])
-                self.buy(size = size)
-            elif self.crossover < 0:
-                self.log("Sell",size, self.data.close[0])
-                self.sell(size = size)
+                self.order = self.buy()
         else:
             if self.crossover < 0:
-                self.log("TP",size, self.data.close[0])
-                self.close()
-            elif self.crossover > 0:
-                self.log("TP",size, self.data.close[0])
-                self.close()
-        if self.position and self.last_day == self.data.datetime.date(0):
-            self.close()
+                self.order = self.close()
+
+    def notify_order(self, order):
+        if order.status in [order.Completed, order.Canceled, order.Rejected]:
+            self.order = None
