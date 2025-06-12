@@ -105,10 +105,9 @@ pytest
 
 For more in-depth information, please refer to the `docs/` directory:
 
-  * [**Backtrader Setup**](https://www.google.com/search?q=docs/backtrader_setup.md): Detailed instructions for setting up your development environment.
-  * [**Strategies**](https://www.google.com/search?q=docs/strategies.md): Comprehensive details on each implemented trading strategy.
-  * [**Usage**](https://www.google.com/search?q=docs/usage.md): A guide on how to use various parts of the framework beyond basic backtesting.
+  * [**Backtrader Setup**](https://github.com/eddiesung111/my-backtest-strategies-v2/blob/main/docs/backtrader_setup.md): Detailed instructions for setting up your development environment.
+  * [**Strategies**](https://github.com/eddiesung111/my-backtest-strategies-v2/blob/main/docs/strategies.md): Comprehensive details on each implemented trading strategy.
 
 ## 📄 License
 
-This project is licensed under the [MIT License](https://www.google.com/search?q=LICENSE).
+This project is licensed under the [MIT License](https://github.com/eddiesung111/my-backtest-strategies-v2/blob/main/LICENSE).
