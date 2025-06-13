@@ -28,9 +28,7 @@ A robust and extensible framework for developing, testing, and analyzing quantit
 ├── .gitignore                       
 ├── LICENSE
 ├── README.md          
-└── requirements.txt       
- 
-
+└── requirements.txt
 ```
 
 ## 🚀 Getting Started
@@ -45,10 +43,10 @@ Follow these steps to set up the project and run your first backtest.
 ### Installation
 
 1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/eddiesung111/my-backtest-strategies-v2.git
-    cd my-backtest-strategies-v2
-    ```
+```bash
+git clone https://github.com/eddiesung111/my-backtest-strategies-v2.git
+cd my-backtest-strategies-v2
+```
 
 2.  **Create and activate a virtual environment:**
 Before installing any packages or running scripts, you must activate the virtual environment.
@@ -70,20 +68,20 @@ source .venv/bin/activate
 You will know the virtual environment is active when your terminal prompt changes to include (.venv) (or similar) at the beginning.
 
 3.  **Install project dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    This will install `backtrader`, `pandas`, `matplotlib`, and any other required libraries.
+```bash
+pip install -r requirements.txt
+```
+This will install `backtrader`, `pandas`, `matplotlib`, and any other required libraries.
 
 ## 🧠 Strategies Implemented
 
 This framework includes the following trading strategies:
 
-  * **BuyHold:** A baseline strategy that simply buys and holds the asset for the entire backtest period.
-  * **SMAGoldenCross:** A trend-following strategy based on the crossover of two Simple Moving Averages.
-  * **EMAGoldenCross:** A trend-following strategy based on the crossover of two Exponential Moving Averages.
-  * **MACDStrategy:** Utilizes the Moving Average Convergence Divergence indicator for momentum and trend signals.
-  * **RSIStrategy:** Employs the Relative Strength Index to identify overbought/oversold conditions and potential reversals.
+* **BuyHold:** A baseline strategy that simply buys and holds the asset for the entire backtest period.
+* **SMAGoldenCross:** A trend-following strategy based on the crossover of two Simple Moving Averages.
+* **EMAGoldenCross:** A trend-following strategy based on the crossover of two Exponential Moving Averages.
+* **MACDStrategy:** Utilizes the Moving Average Convergence Divergence indicator for momentum and trend signals.
+* **RSIStrategy:** Employs the Relative Strength Index to identify overbought/oversold conditions and potential reversals.
 
 For detailed descriptions, logic, and parameters of each strategy, refer to the [Strategies documentation](https://github.com/eddiesung111/my-backtest-strategies-v2/blob/main/docs/strategies.md).
 
@@ -113,8 +111,8 @@ pytest
 
 For more in-depth information, please refer to the `docs/` directory:
 
-  * [**Backtrader Setup**](https://github.com/eddiesung111/my-backtest-strategies-v2/blob/main/docs/backtrader_setup.md): Detailed instructions for setting up your development environment.
-  * [**Strategies**](https://github.com/eddiesung111/my-backtest-strategies-v2/blob/main/docs/strategies.md): Comprehensive details on each implemented trading strategy.
+* [**Backtrader Setup**](https://github.com/eddiesung111/my-backtest-strategies-v2/blob/main/docs/backtrader_setup.md): Detailed instructions for setting up your development environment.
+* [**Strategies**](https://github.com/eddiesung111/my-backtest-strategies-v2/blob/main/docs/strategies.md): Comprehensive details on each implemented trading strategy.
 
 ## 📄 License
 
