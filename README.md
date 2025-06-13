@@ -8,8 +8,6 @@ A robust and extensible framework for developing, testing, and analyzing quantit
 * **Automated Backtesting:** Run multiple strategies against historical data with configurable parameters.
 * **Comprehensive Performance Analysis:** Utilize Backtrader's built-in analyzers for key metrics (Returns, Sharpe Ratio, Drawdown, SQN, etc.).
 * **Detailed Trade Logging:** Custom observer to capture and export individual trade details (entry/exit dates, prices, PnL, etc.).
-* **Automated Chart Generation:** Visualize strategy performance and trade execution directly from backtest results.
-* **Structured Output Management:** Organize all reports, trade logs, charts, and backtest logs into a dedicated `outputs/` directory.
 * **`pytest`-Based Testing:** Ensure the reliability and correctness of your strategies and core components.
 
 ## 📂 Project Structure
@@ -18,23 +16,22 @@ A robust and extensible framework for developing, testing, and analyzing quantit
 
 .
 ├── docs/                               \# Comprehensive documentation files
-│   ├── backtrader\_setup.md             \# Guide to setting up Backtrader environment
+│   ├── backtrader_setup.md             \# Guide to setting up Backtrader environment
 │   └── strategies.md                   \# Detailed descriptions of all trading strategies
 ├── src/                                \# Source code for strategies and core logic
-│   └── backtest\_strategies/
+│   └── backtest_strategies/
 │       ├── strategies/                 \# Individual trading strategy implementations
-│       └── **init**.py
-│       └── **main**.py
-│       └── run.py                      \# (If this is used for something separate)
+│       └── __init__.py
+│       └── __main__.py
+│       └── run.py                  
 ├── tests/                              \# Unit and integration tests for strategies and components
-├── outputs/                            \# Directory for generated backtest results (reports, charts, logs)
-├── .gitignore                          \# Specifies intentionally untracked files to ignore
+├── .gitignore                       
 ├── LICENSE
 ├── README.md          
 └── requirements.txt       
  
 
-````
+```
 
 ## 🚀 Getting Started
 
