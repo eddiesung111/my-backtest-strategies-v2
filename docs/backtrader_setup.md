@@ -54,24 +54,12 @@ source .venv/bin/activate
 You will know the virtual environment is active when your terminal prompt changes to include (.venv) (or similar) at the beginning.
 
 ### Step 3.4: Install Project Dependencies
-Once your virtual environment is active, install backtrader, pandas, and matplotlib:
-
 ```bash
-pip install backtrader pandas matplotlib
+pip install -r requirements.txt
 ```
+This will install `backtrader`, `pandas`, `matplotlib`, and any other required libraries.
 
-* **backtrader**: The core backtesting framework.
-* **pandas**: Used for data manipulation, especially when loading data into Backtrader.
-* **matplotlib**: Used by Backtrader for generating charts of your backtest results.
-(Optional: Create requirements.txt)
-After successfully installing all dependencies, you can create a requirements.txt file to easily manage and share your project's dependencies:
-
-```bash
-pip freeze > requirements.txt
-```
-Then, others (or you in the future) can install all dependencies with a single command: pip install -r requirements.txt
-
-Step 3.5: Deactivate the Virtual Environment
+## Step 3.5: Deactivate the Virtual Environment
 When you are done working on the project, you can deactivate the virtual environment:
 
 ```bash

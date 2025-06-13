@@ -49,17 +49,28 @@ Follow these steps to set up the project and run your first backtest.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/eddiesung111/my-backtest-strategies-v2.git](https://github.com/eddiesung111/my-backtest-strategies-v2.git)
+    git clone https://github.com/eddiesung111/my-backtest-strategies-v2.git
     cd my-backtest-strategies-v2
     ```
 
 2.  **Create and activate a virtual environment:**
-    ```bash
-    python3 -m venv .venv
-    source .venv/bin/activate  # On macOS/Linux
-    # .\.venv\Scripts\Activate.ps1  # On Windows PowerShell
-    # .venv\Scripts\activate.bat   # On Windows Command Prompt
-    ```
+Before installing any packages or running scripts, you must activate the virtual environment.
+
+* On macOS / Linux:
+```bash
+source .venv/bin/activate
+```
+
+* On Windows (PowerShell):
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+* On Windows (Command Prompt):
+```DOS
+.venv\Scripts\activate.bat
+```
+You will know the virtual environment is active when your terminal prompt changes to include (.venv) (or similar) at the beginning.
 
 3.  **Install project dependencies:**
     ```bash
@@ -82,7 +93,7 @@ For detailed descriptions, logic, and parameters of each strategy, refer to the 
 ## Run the program
 You can simply use the following command to run the program.
 ```bash
-python3 src/backtest_strategies/run.py [Strategies]
+python3 src/backtest_strategies/run [Strategies]
 ```
 Strategies could be:
 * BuyHold
